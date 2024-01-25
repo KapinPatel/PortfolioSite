@@ -57,30 +57,39 @@ const typed = new Typed('#Multiple-text',{
 })
 
 // popup
-function showPopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "block";
-}
+// function showPopup() {
+//     var popup = document.getElementById();
+//     popup.style.display = "block";
+// }
 
-function closePopup() {
-    var popup = document.getElementById("popup");
+function showPopup(popupId) {
+    var popup = document.getElementById(popupId);
+
+    if (popup.style.display === "block") {
+        popup.style.display = "none";
+    } else {
+        popup.style.display = "block";
+    }
+}
+function closePopup(popupId) {
+    var popup = document.getElementById(popupId);
     popup.style.display = "none";
 }
 
-function sendEmail(){
-    Email.send({
-        SecureToken:"e8edb690-b553-4d8b-8c9a-2da22621ef3e",
-        // Host : "smtp.gmail.com",
-        // Username : "kapinpatel2000@gmail.com",
-        // Password : "Kapin@123",
-        To : 'kapinpatel2000@gmail.com',
-        From : document.getElementById("email").value,
-        Subject : document.getElementById("text").value,
-        Body : "Name: " + document.getElementById("name").value
-        +"<br> Email:" + document.getElementById("email").value
-        +"<br> Phone No:" + document.getElementById("number").value
-        +"<br> Message:" + document.getElementById("message").value
-    }).then(
-      message => alert("message Sent SuccesFully")
-    );
-}
+// function sendEmail(){
+//     Email.send({
+//         SecureToken:"e8edb690-b553-4d8b-8c9a-2da22621ef3e",
+//         // Host : "smtp.gmail.com",
+//         // Username : "kapinpatel2000@gmail.com",
+//         // Password : "Kapin@123",
+//         To : 'kapinpatel2000@gmail.com',
+//         From : document.getElementById("email").value,
+//         Subject : document.getElementById("text").value,
+//         Body : "Name: " + document.getElementById("name").value
+//         +"<br> Email:" + document.getElementById("email").value
+//         +"<br> Phone No:" + document.getElementById("number").value
+//         +"<br> Message:" + document.getElementById("message").value
+//     }).then(
+//       message => alert("message Sent SuccesFully")
+//     );
+// }

@@ -154,6 +154,7 @@ span{
 .about-content p{
     font-size: 1.6rem;
     margin: 2re 0 3rem;
+    padding-bottom: 10px;
 }
 
 /* services section */
@@ -464,7 +465,7 @@ span{
     padding: 20px;
     border: 1px solid var(--main-color);
     width: 60%;
-    height: 60%;
+    height: auto;
   }
   .popup-content p{
     font-size: 1.6rem;
@@ -483,4 +484,13 @@ span{
   
   .close:hover {
     color: var(--main-color);
+  }
+  @media (max-width: 365px){
+    .popup{
+        padding-top: 20px;
+    }
+    .popup-content{
+        width: 90%;
+        height: auto;
+    }
   }
